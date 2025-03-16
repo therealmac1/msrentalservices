@@ -206,6 +206,15 @@
             menuDropdown.classList.toggle('active');
         });
 
+        // Close dropdown if clicking anywhere outside of the menu
+document.addEventListener('click', function (event) {
+    // Check if the clicked element is outside of the menu icon and the dropdown
+    if (!menuIcon.contains(event.target) && !menuDropdown.contains(event.target)) {
+        menuDropdown.style.display = 'none'; // Close the dropdown
+        menuDropdown.classList.remove('active'); // Remove active class
+    }
+});
+
         
 
         document.getElementById("contact-form").addEventListener("submit", function(event) {
