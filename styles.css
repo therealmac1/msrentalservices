@@ -1,0 +1,631 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-color: #a1720c;
+    --second-color: #ffac38;
+    --text-color: #444;
+}
+
+/* Custom Scrollbar */
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section {
+    padding: 50px 100px;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 13px 100px;
+}
+
+.logo img {
+    width: 70px;
+}
+
+/* Styling for the navbar */
+.menu-dropdown {
+    background-color: black; /* Navbar background color */
+    padding: 10px; /* Space around the items */
+    width: 45%; /* Ensures it stretches across the screen */
+}
+
+.menu-dropdown ul {
+    display: flex; /* Makes the list items display in a horizontal row */
+    justify-content: space-around; /* Evenly space the items horizontally */
+    list-style: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.menu-dropdown ul li {
+    padding: 10px 30px; /* Adds padding around each item */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 15px; /* Font size */
+    border-radius: 5px;
+}
+
+.menu-dropdown ul li:hover {
+    background-color: var(--main-color); /* Change background on hover */
+    color: ; /* Change text color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    
+}
+
+#menu-dropdown {
+    display: flex; /* Initially hidden */
+}
+
+#menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10001;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+}
+
+/* Home Section Styling */
+.home {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.671); /*Dim the background*/
+    background-blend-mode: darken; /*Overlay the dimming effect*/
+    z-index: 1;
+}
+
+/* Pseudo-element for dimming the background */
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/MS_Logo_black_edited-removebg-preview-removebg-preview-removebg-preview.png'); /* MS Logo */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%; /* Adjust size as needed */
+    opacity: 0.7; /* Transparency of the MS Logo */
+    z-index: -1;
+    filter: blur(2px); /* Apply the blur effect */
+}
+
+/* Pseudo-element for dimming the background */
+.home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/PORSCHE\ FRONT\ VIEW.jpg); /* Adjust the opacity to control the dimming */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1000; /* Place behind the MS Logo */
+}
+
+#home {
+    scroll-behavior: smooth;
+    justify-content: center;
+    display: flex;
+}
+
+#services h1 {
+    scroll-behavior: smooth;
+    justify-content: center;
+    display: flex;
+}
+
+#about h1 {
+    scroll-behavior: smooth;
+    justify-content: center;
+    display: flex;
+}
+
+#contact h1 {
+    scroll-behavior: smooth;
+    justify-content: center;
+    display: flex;
+}
+
+/* ABOUT US STYLING */
+#about {
+    background-color: black; /* Dark royal blue background */
+    padding: 50px;
+    color: white; /* White text for readability */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+#about h1 {
+    font-size: 2.5em;
+    color: gold; /* Gold for the heading */
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#about p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: gold; /* Highlight the first letter of the paragraph */
+}
+
+/* SERVICES STYLING */
+#services {
+    background-color: #0b1d35; /* Dark royal blue background */
+    padding: 50px;
+    color: white; /* White text */
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+}
+
+#services h1 {
+    color: gold; /* Gold headings */
+    font-size: 2.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#services p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#services p::first-letter {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: gold;
+}
+
+/* CONTACT US PAGE STYLING */
+#contact {
+    /* background-color: #0b1d35; Dark royal blue background */
+    padding: 50px;
+    color: black;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: gray;
+}
+
+#contact h1 {
+    font-size: 2.5em;
+    color: gold; /* Gold for the heading */
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    /* background: rgba(255, 255, 255, 0.1); */
+    padding: 10px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    background-color: gold;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: darkgoldenrod;
+}
+
+@media (max-width: 1347px) {
+    form {
+        width: 90%;
+    }
+}
+
+/* #contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+#contact-form label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f0f0f0;
+}
+
+#contact-form button {
+    background-color: gold;
+    color: #0b1d35;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #e6c200; /* Slightly darker gold *
+} */
+
+.text {
+    text-align: center;
+    color: white; /* Ensure text is visible against the dimmed background */
+}
+
+.text h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.text span {
+    color: var(--main-color);
+}
+
+.text p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*pop-up contact customization*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contact-btn {
+    background-color: #c48a0d;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+/* The modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact-option {
+    background-color: #1DA1F2;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.whatsapp {
+    background-color: green; /* WhatsApp green color */
+}
+
+.phone {
+    background-color: #c48a0d; /* Call button color */
+    color: black;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the menu icon */
+#menu-icon {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* .gradient-fade {
+    position: absolute;
+    padding: 30px;
+    width: 50%; /* Adjust as needed *
+    height: 50%; /* Adjust as needed *
+    background: linear-gradient(to right, rgba(41, 41, 41, 0.062), rgba(24, 24, 24, 0.589) 45%, transparent);
+    z-index: 1; /* Ensure gradient fade is above the dimming layer *
+} */
+
+/* Hide the hamburger menu icon by default (on larger screens) */
+#menu-icon {
+    display: none;
+}
+
+/* Show the menu dropdown on larger screens (as a navbar) */
+.menu-dropdown {
+    display: flex; /* Or flex/grid for full layout */
+}
+
+/* Footer styling */
+.footer {
+    background-color: black; /* Background color */
+    padding: 20px 0; /* Padding for top and bottom */
+    color: white; /* Text color */
+    text-align: center; /* Center-align the content */
+    font-family: "Poppins", sans-serif; /* Font style */
+    border-top: 1px solid #444; /* Optional border at the top */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between text and social icons */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.social-icons a {
+    color: white; /* Icon color */
+    font-size: 18px; /* Icon size */
+    /* margin: 0 10px; Space between icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffac38; /* Change color on hover */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    align-items: center;
+}
+
+
+
+
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 1347px) {
+    header {
+        padding: 15px 20px;
+    }
+    .home {
+        padding: 20px;
+    }
+    .text h1 {
+        font-size: 3.5rem;
+    }
+    .text p {
+        font-size: 1.5rem;
+    }
+
+    /* Show the menu icon */
+    #menu-icon {
+        display: block;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001; /* Ensure the menu icon is above other elements */
+    }
+
+    /* Navbar dropdown as a vertical sidebar */
+    .menu-dropdown {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        background-color: black; /* Background color for the navbar */
+        position: fixed; /* Fix it to the right side of the screen */
+        top: 40px;
+        right: 0;
+        width: 50%; /* Adjust width as needed */
+        height: 100%; /* Full height on mobile */
+        padding: 20px;
+        z-index: 1000; /* Ensure it appears on top */
+        transition: transform 0.7s ease-in-out;
+        transform: translateX(100%); /* Hidden off-screen initially */
+    }
+
+    /* Show the dropdown when menu is clicked */
+    .menu-dropdown.active {
+        transform: translateX(0); /* Slide in from the right */
+    }
+
+    .menu-dropdown ul {
+        display: flex;
+        flex-direction: column; /* Arrange items in a vertical list */
+        list-style: none; /* Remove bullets */
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-dropdown ul li {
+        padding: 5px 30px;
+        color: white; /* Text color */
+        font-size: 18px;
+        cursor: pointer;
+        text-align: right; /* Align text to the right */
+    }
+
+    .menu-dropdown ul li:hover {
+        background-color: #444; /* Hover effect */
+    }
+
+    /* Hide the menu dropdown (navbar) initially on smaller screens */
+    .menu-dropdown {
+        display: none;
+    }
+
+    /* Mobile responsiveness */
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-icons a {
+        margin: 5px; /* Adjust spacing between icons on mobile */
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    #about {
+        padding: 20px;
+    }
+
+    #about h1 {
+        font-size: 2em;
+    }
+
+    #about p {
+        font-size: 1.1em;
+    }
+
+    #services {
+        padding: 20px;
+    }
+
+    #services h1 {
+        font-size: 2em;
+    }
+
+    #services p {
+        font-size: 1em;
+    }
+
+    #contact {
+        padding: 20px;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+
+    #contact-form button {
+        width: 100%;
+    }
+}
+
+

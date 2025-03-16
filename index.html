@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>New Rental</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src='main.js'></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+
+<body>
+    <!-- Background Image -->
+
+
+    <!-- HEADER SECTION -->
+    <header>
+        <a href="#" class="logo">
+            <img src="images/MS_Logo_black_edited-removebg-preview-removebg-preview-removebg-preview.png"
+                alt="Car Rental Company Logo">
+        </a>
+
+        <!-- NAVBAR -->
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="menu-dropdown" id="menu-dropdown">
+            <ul>
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#services">
+                    <li>Services</li>
+                </a>
+                <a href="#about">
+                    <li>About Us</li>
+                </a>
+                <a href="#contact">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="gradient-fade">
+            <div class="text">
+                <h1><span>Looking</span> to rent a car?</h1>
+                <p>Gain access to a fleet of exotic cars at <br> MS Car Rentals and Shortlets, where premium
+                    customer service is guaranteed.</p><br>
+
+                <button class="contact-btn" onclick="openModal()">BOOK A RIDE</button>
+
+                <!-- Modal Structure -->
+                <div id="contactModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2>CONTACT US via</h2>
+                        <button class="contact-option whatsapp" onclick="whatsappContact()">WhatsApp</button>
+                        <button class="contact-option phone" onclick="phoneContact()">Phone Call</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="services">
+        <h1>Services</h1>
+        <p>At MS Car Rentals and Shortlets, we offer a premium chauffeur-driven car rental experience tailored to your
+            needs. Our services are designed with your convenience and satisfaction in mind:<br>
+            <br>
+
+            Luxury Chauffeur-Driven Car Rentals
+            Experience the thrill of being driven in premium cars from world-class brands like Range Rover,
+            Mercedes-Benz, and more. Whether it's for a special occasion or a business trip, our professional drivers
+            ensure you travel in comfort and style.<br>
+            <br>
+
+            Flexible Rental Plans
+            Choose from our flexible rental options that fit your schedule, whether you need a car for a day, a week, or
+            even a month.<br>
+            <br>
+
+            Doorstep Delivery and Pickup
+            We make it easy for you by offering doorstep delivery and pickup, ensuring a smooth and hassle-free
+            experience from start to finish.<br>
+            <br>
+
+            Our goal is to provide luxury, flexibility, and convenience—all at competitive rates. Let us take care of
+            your travel needs with the highest standard of service.</p>
+    </section>
+
+
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>At MS Car Rentals and Shortlets, we pride ourselves on being a premium provider of exotic car rentals and
+            shortlet services. Whether you're looking to make a statement with a luxury vehicle or enjoy a comfortable
+            stay in one of our shortlet apartments, we are dedicated to delivering an unmatched customer experience.
+
+            Our range of high-end vehicles is perfect for both leisure and business travelers. From special occasions to
+            corporate needs, we ensure that your journey is as smooth as it is stylish. Every booking with us comes with
+            personalized service, ensuring you get luxury, convenience, and reliability—without compromise.
+
+            At MS Car Rentals and Shortlets, our mission is to provide top-notch service at competitive rates, making
+            luxury accessible for everyone.</p>
+    </section>
+
+
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>We are here to assist you with any questions or booking inquiries. Please fill out the form below, and we'll get back to you as soon as possible.</p>
+
+        <form action="https://formsubmit.co/msrentalservices@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="name" required>
+            <input type="email" name="email" placeholder="email" required>
+            <textarea name="message" placeholder="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+        
+        <!-- <form id="contact-form" action="https://formsubmit.co/msrentalservices@gmail.com" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form> -->
+        
+        <p>You can also reach us via phone at <strong>+123 456 7890</strong> or email at <strong>info@mscarrentals.com</strong>.</p>
+    </section>
+    
+    
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="fa-brands fa-instagram"><img src="images/Instagram_icon-removebg-preview.png"
+                        alt="icon" style="width: 43px; height: 30px;" />
+                    <a href="#" class="fa-brands fa-tiktok"><img src="images/Tiktok_icon_original-removebg-preview.png"
+                            alt="icon" style="width: 43px; height: 35px;" />
+                    </a>
+            </div>
+            <p> &copy; 2024 Car Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Open the modal
+        function openModal() {
+            console.log("Opening Modal"); // Debugging
+            document.getElementById("contactModal").style.display = "block";
+        }
+
+        // Close the modal
+        function closeModal() {
+            console.log("Closing Modal"); // Debugging
+            document.getElementById("contactModal").style.display = "none";
+        }
+
+        // Redirect to WhatsApp
+        function whatsappContact() {
+            window.location.href = "https://wa.me/2347044929697";  // Replace with your WhatsApp number
+            closeModal();
+        }
+
+        // Redirect to Phone Call
+        function phoneContact() {
+            window.location.href = "tel:+2347044929697";  // Replace with your phone number
+            closeModal();
+        }
+
+        // Close the modal if the user clicks outside the modal
+        window.onclick = function (event) {
+            var modal = document.getElementById("contactModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        const menuIcon = document.getElementById('menu-icon');
+        const menuDropdown = document.getElementById('menu-dropdown');
+
+        // Toggle dropdown on menu click
+        menuIcon.addEventListener('click', function () {
+            menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Toggle dropdown with smooth transition
+        menuIcon.addEventListener('click', function () {
+            // Toggle the 'active' class on the menu-dropdown
+            menuDropdown.classList.toggle('active');
+        });
+
+        
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch("https://formsubmit.co/msrentalservices@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Your message has been successfully sent!");
+                document.getElementById("contact-form").reset();
+            })
+            .catch(error => {
+                alert("Error, please try again.");
+            });
+        });
+
+
+    </script>
+
+    <!-- Link to JS -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
